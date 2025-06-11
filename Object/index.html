@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        Subject: "test",
+        Grid: "1257",
+        Age: 56,
+      };
+      console.log(obj); // Object property inside
+      console.log(obj.Grid); // 1257
+
+      // OVERRIDE
+      // CHANGE AGE VALUE
+      console.log("OVERRIDE...........");
+      obj.Age = 45;
+      console.log(obj);
+      console.log(obj["Grid"]);
+      
+      console.log(obj.Age); // 45
+
+      // ADD KEY AND VALUE
+      console.log("ADD KEY AND VALUE...........");
+      obj.course = "js";
+      console.log(obj); // add course
+      console.log(obj.course);
+      
+      console.log("with same key name..........");
+       obj = {
+       id : 123,
+       Grid:1579,
+       id:579
+      }
+      console.log(obj); //id override take 2 id 579
+
+      console.log("for in loop.........");
+      for(var key in obj){
+        console.log(key); //get all key 
+        console.log(obj.key); //undefine
+        console.log(obj[key]); // get all key value
+        
+      }
+      
+      
+    </script>
+  </body>
+</html>

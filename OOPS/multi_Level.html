@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student{
+            constructor(name,grid,mobile,email){
+                document.write(`name = ${name},grid=${grid},mobile=${mobile},email=${email}<br>`)
+            }
+        }
+        class Parent extends  Student{
+            constructor(name,mobile,email){
+                super("test",3434,46885,"test12@gmail.com")
+                document.write(`name = ${name},mobile=${mobile},email=${email}<br>`)  
+            }
+        } 
+        class Result extends Parent  {
+            constructor(){
+                super("parent",97878,"parent@gmail.com")
+            }
+        }
+        new Result()
+       
+
+    </script>
+</body>
+</html>

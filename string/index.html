@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string</title>
+  </head>
+  <body>
+    <script>
+      const str = "hello world";
+      console.log(str.toLowerCase());
+      console.log(str.toUpperCase());
+
+      // length – Returns the number of characters in a string
+      console.log(str.length);
+      const str2 = " first ";
+      console.log(str2.length); //7
+
+      //trimStart() remove space from star
+      const output = str2.trimStart();
+      console.log(output.length);
+      
+      // trim() remove space from both side
+      const output2 = str2.trim();
+      console.log(output2.length); //5
+
+      // split  => it change string in array
+      const str3 = "hello web";
+      console.log(str3.split()); //['hello web']
+      console.log(str3.split("")); // (9) ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'e', 'b']
+      console.log(str3.split(" ")); // (2) ['hello', 'web']
+      console.log(str3.split(" ")[1]); // web
+    </script>
+  </body>
+</html>

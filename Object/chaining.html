@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chaining</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        name: "final",
+        course: "web",
+        address: {
+          country: "india",
+          state: "gujart",
+          city: "AHM",
+        },
+      };
+      console.log(obj.name); // final
+      console.log(obj.address);
+      console.log(obj.address.city); // undefine
+
+      // 2 way
+      console.log(obj.names); // undefined
+      console.log("test.........");
+      //  console.log(obj.addres.cities); //
+
+      console.log("final.........");
+      console.log(obj.address.cities); // undefine
+
+      // CHANINING OPERATOR (?. KEY EXIST OR NOT)
+      // its handel key not variable
+      console.log("address........");
+      console.log(obj?.addres?.city);
+      console.log(obj?.addres?.city);
+
+       // its handel key not variable
+      console.log("object........");
+      console.log(obm?.addres?.city);      
+    </script>
+  </body>
+</html>

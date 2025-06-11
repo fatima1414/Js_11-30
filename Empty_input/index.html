@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <button type="button" id="submitdata">click</button>
+
+    <script>
+
+        const submitdata = document.querySelector('#submitdata')
+           submitdata.addEventListener('click', () => {
+            const username = (document.querySelector('#username').value).trim()
+            console.log(username);
+
+            
+
+            if (!username){
+                alert("username enter")
+            }
+            
+            if (username.trim()==""){
+                 alert(" enter  username")
+            }
+           
+            
+        })
+    </script>
+</body>
+</html>

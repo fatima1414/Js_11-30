@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //   class Student {
+
+        //     constructor() {
+        //       document.write("simple consructor")
+        //     }
+        //   }
+        //   new Student()
+
+        console.log("para,argu...........");
+        class Hospital {
+            constructor(name, address) {
+                document.write(`name = ${name}, address = ${address}`);
+            }
+        }
+        new Hospital("LG", "Maninagar");
+
+
+         console.log("value mostily usee...........");
+         class Hospital{
+            constructor(name, address){
+                this.name = name
+                this.address = address
+            }
+            show(){
+                
+                document.write(`name = ${this.name},address = ${this.address}`);
+            }
+         }
+         const h = new Hospital("Lg","Maninagar")
+         h.show()
+         console.log(h.name);
+         console.log(h.add);
+
+    </script>
+</body>
+
+</html>

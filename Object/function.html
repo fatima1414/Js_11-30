@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const student = {
+        name: "abc",
+        courese: "full stack",
+        grid: 9254,
+        age: 19,
+
+        //SIMPLE FUNCTION
+        show: function () {
+          return `username:${student.name}, courese:${student.courese} , grid:${student.grid} ,
+          age:${student.age} `;
+        },
+        showData: function () {
+          return `username:${this.name} , courese:${this.courese} , grid:${this.grid} ,
+          age:${this.age} `;
+        },
+
+        // Arrow Function
+        // this key word and hoisting  can't use in arrow function
+        showArrow: () => {
+          return `username:${student.name}, courese:${student.courese} , grid:${student.grid} ,
+          age:${student.age} `;
+         },
+         // it's give undefined
+         showDataArrow: () => {
+          return `username:${this.name} , courese:${this.courese} , grid:${this.grid} ,
+          age:${this.age} `;
+        },
+      };
+
+      console.log(student.show()) + "<br>";
+      console.log(student.showData()) + "<br>";
+      console.log(student.showArrow()) + "<br>";
+      console.log(student.showDataArrow()) + "<br>";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>splice</title>
+  </head>
+  <body>
+    <script>
+      arr = [11, 2, 5, 12, 9];
+      arr.splice(3, 1); // delete 12 at 3 inex
+      console.log(arr); //[11,2,9]
+
+      arr.splice(3, 2); // delete last 2 index
+      console.log(arr); // [11,2,5]
+
+      arr.splice(1, 0, 6); //add 6 at 1 index
+      console.log(arr); //[11,6,2,5,12,9]
+
+      arr.splice(1, 2, 15, 16); //add & delete both
+      console.log(arr); //[11,15,16,12,9]
+
+      arr.splice(0, arr.length, 11, 22, 33, 44, 55); // to remove all array write arr.length
+      console.log(arr);
+
+      arr1 = [5, 7, 11, 2, 15, 17];
+      arr1.splice(1, 1); // to  remove 7
+      console.log(arr1); //[5,11,2,15,17]
+
+      arr1 = [5, 7, 11, 2, 15, 17]; // add 12 in 3 index
+      arr1.splice(3, 1, 12); //[5,7,11,12,15,17]
+      console.log(arr1);
+
+      arr1 = [5, 7, 11, 2, 15, 17]; // add 7 8 9
+      arr1.splice(2, 0, 8, 9); //[5,7,8,9,11,2,15,17]
+      console.log(arr1);
+    </script>
+  </body>
+</html>

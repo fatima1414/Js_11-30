@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = [1]
+        console.log(arr);//arr 1
+        console.log(arr.length); // 1
+        
+        if (arr.length>0){
+            console.log("array value");
+        }else{
+            console.log("empty array");
+        }
+
+        const arr1 =  [10,20,30,40]
+        console.log(arr1[0],arr1[1],arr1[2],arr1[3]); //  [10,20,30,40]
+        
+        
+        // Array Method
+        // PUSH => Add element at last index
+        const arr3 = [1]
+        console.log(arr3.push(22)); // 2 return element position
+
+        console.log(arr3.push(100)); // 3 return position
+        console.log(arr3); // [1,22,100]
+        arr3.push(101,102,103)
+        console.log(arr3); //[1,22,100,101,102,103]
+        
+
+        // POP => remove element from last index
+        console.log(arr3.pop()); //103 - remove last index value
+        arr3.pop() //102 - remove
+        console.log(arr3); //[1,22,100,101]
+
+        //Shift => remove  element from first index
+        arr3.shift()
+        console.log(arr3);
+
+        //unshift => Add element at first index
+
+        arr3.unshift("start")
+        console.log(arr3); // ['start',22,100,101]
+
+        arr3.unshift("end")
+        console.log(arr3); //["end","start",22,100,101]
+
+        arr3.unshift("first","second")
+        console.log(arr3); // ["first" "second" "end","start",22,100,101]
+
+
+
+    </script>
+</body>
+</html>

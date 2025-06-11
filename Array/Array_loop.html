@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array_loops</title>
+  </head>
+  <body>
+    <script>
+      // 1  way for loop
+
+      let arr = [1, 2, 3, 4, 5];
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+
+      // 2 way  for of
+
+      let arr1 = [1, 2, 3, 4, 5, 7, 8, 9];
+
+      for (let ele of arr1) {
+        console.log(ele);
+      }
+
+      // 3 way for in ( in-index)
+
+      let arr2 = [11, 22, 33, 44, 55, 77, 88, 99];
+
+      for (let index in arr2) {
+        console.log(arr2[index]);
+      }
+
+      // 4 way forEach  (map,forEach,filter,reduce it is a function)
+      //1 with arrow function
+
+      let arr3 = [11, 22, 33, 44];
+
+      arr3.forEach((ele) => {
+        console.log(ele);
+      });
+
+      //2 with annonymous function
+
+      let arr4 = [11, 22, 33, 44];
+      arr4.forEach(function (ele) {
+        console.log(ele);
+      });
+
+      // 3 interview question
+      // call backed function as argument pass in another function
+
+      let arr5 = [10, 20, 30, 40];
+      const show = (ele) => {
+        console.log(ele);
+      };
+      arr5.forEach(show);
+
+      //      MAP
+
+      const newarr = arr.map((ele) => {
+        return ele * ele;
+        ele ** 2;
+      });
+      arr = [1, 2, 3, 4];
+      console.log(newarr);
+      console.log(arr);
+
+      // different way of print
+      //    1 way is for loop
+
+      let arr6 = [11, 50, 1, 25, 51, 100];
+      for (let i = 0; i < arr.length; i++) {
+        if (arr6[i] > 25) {
+          console.log(arr[i]);
+        }
+      }
+
+      //    2 way is for of
+
+      for (var ele of arr6) {
+        if (ele > 25) [console.log(ele)];
+      }
+
+      // 3 way with map
+
+      let op = arr6.map((ele) => {
+        if (ele > 25) return ele;
+      });
+      console.log(op);
+
+      //    filter
+
+      let arr7 = [11, 50, 1, 25];
+      let filterdata = arr7.filter((ele) => {
+        return ele > 25;
+      });
+      console.log(arr7);
+      console.log(filterdata);
+
+      // filter map
+      console.log("filtermap............");
+      const arra = [12, 4, 56, 889, 5];
+
+      const mapArrfilter = arra.map((ele) => {
+        if (ele < 5) {
+          return ele;
+        }
+      });
+      console.log(mapArrfilter);
+      
+    </script>
+  </body>
+</html>

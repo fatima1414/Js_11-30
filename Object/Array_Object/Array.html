@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      const arr = [
+        {
+          id: 123,
+          name: "test",
+        },
+
+        {
+          id: 456,
+          name: "abc",
+        },
+      ];
+      //   console.log(arr[0].id);
+      //   console.log(arr[0].name);
+      for (var i = 0; i < arr.length; i++) {
+        console.log(`id = ${arr[i].id} name = ${arr[i].name}`);
+      }
+
+      arr.forEach((ele) => {
+        console.log(`id = ${ele.id} name = ${ele.name}`);
+      });
+    </script>
+  </body>
+</html>

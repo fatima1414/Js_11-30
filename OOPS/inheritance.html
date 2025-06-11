@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Parent{
+            constructor(){
+                console.log("parent class");
+            }
+        }
+        class Child extends Parent{
+            constructor(){
+                // super()
+                console.log("child class");
+                super()
+            }
+        }new Child
+
+
+        // console.log("inheritance-same-method............");
+
+        //  class Parent{
+        //     show(){
+        //         console.log("parent class");
+        //     }
+        // }
+        // class Child extends Parent{
+        //     show(){
+        //         // super.show()
+        //         console.log("child class"); 
+        //         super.show()
+        //     }
+        // }
+        // const c = new Child()
+        // c.show()
+
+
+         console.log("inheritance-method-html............");
+
+         class Parent{
+            show(){
+                console.log("parent class");
+            }
+        }
+        class Child extends Parent{
+            show2(){
+                console.log("child class"); 
+            }
+        }
+        const c = new Child()
+        c.show()
+        c.show2()
+    </script>
+</body>
+</html>

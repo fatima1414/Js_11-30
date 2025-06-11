@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button id="show">click</button> 
+
+
+   <script>
+    const show = document.querySelector('#show')
+    document.addEventListener('click',() =>{
+        alert("click event")
+    })
+
+    // 2 way 
+    document.querySelector('#show').addEventListener('click',()=>{
+        alert("read event 2222")
+    })
+   </script>
+</body>
+</html>

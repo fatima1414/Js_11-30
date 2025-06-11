@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // // rest
+      // console.log("rest parameter..........");
+
+      // function show(...data){
+      // console.log(data);
+      // }
+      // show(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)
+
+      // // spread
+      // console.log("spread..........");
+      // arr1 =[1,2,3,4]
+      // arr2 = [5,6,7,8]
+      // const arr3 = [...arr1,...arr2]
+      // console.log(arr3);
+
+      // // arr(1,2,3,4,5,6,7,8,)
+      // console.log("second..........");
+
+      // const arr4 = [5, 6, 9, ];
+
+      // function sum(...nums) {
+      //   return nums.reduce((acc, curr) => acc + curr, 0);
+      // }
+
+      // console.log("Sum of array:", sum(...arr4)); // Output: 28
+
+      // second way 
+      const arr5 = [5, 6, 9];
+
+
+        function sum(...num) {
+           return num.reduce((acc, curr) =>{
+           return  ( acc + curr);
+             } )
+        }
+       const result = sum(...arr5)
+        
+        console.log(result);
+    </script>
+  </body>
+</html>

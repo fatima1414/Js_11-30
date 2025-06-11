@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+    // js not use for hierachichl
+      class Comman {
+        constructor() {
+          console.log("comman class");
+        }
+      }
+      class Student extends Comman {
+        constructor() {
+          super();
+          console.log("student class");
+        }
+      }
+      class Parent extends Comman {
+        constructor() {
+          super();
+          console.log("Parent class");
+        }
+      }
+      new student();
+      new Parent();
+      
+    </script>
+  </body>
+</html>

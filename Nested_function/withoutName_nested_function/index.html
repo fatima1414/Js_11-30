@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // 1 way 
+        
+      function outer() {
+        console.log("outer function");
+        return () => {
+          console.log("inner function");
+          return () => {
+            console.log("inner2 function");
+          }
+        }
+      }
+      const output1 = outer()
+     const output2 = output1()
+     output2()
+ 
+    //  2 way
+    // closure a , b
+    function add (a){
+        return (b) =>{
+            return (c) => {
+            return (d) =>{
+                return a + b + d
+            }
+            }
+        }
+    }
+    const out1 = add (2)
+    const out2 = out1 (10)
+    const out3 = out2 (26)
+    const out4 = out3 (6)
+    console.log('out4',out4);
+
+    //lexical scope => flow to access scope variable
+
+    // currying
+    const put = add (2) (30) (15) (52)
+    console.log("put",put);
+    
+
+
+
+
+    </script>
+  </body>
+</html>

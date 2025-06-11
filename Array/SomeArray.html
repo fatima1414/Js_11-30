@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Always true return other than include zero value
+      if (3) {
+        console.log("true..........");
+      } else {
+        console.log("false..........");
+      }
+
+      // Every (Every check all element) Ans in true or false
+      console.log("Every.........");
+      const arr = [12, 4, 56, 889, 5];
+      const everyData = arr.every((ele) => {
+        return ele > 5;
+      });
+      console.log(everyData);
+       
+      // some (koi bhi ek condition true hoi to true dega)
+      console.log("some.........");
+      const someData = arr.some((ele) => {
+        return ele > 5;
+      });
+      console.log(someData);
+
+        // INDEX OF, INCLUDE , FINDINDEX 
+        
+        // Index OF (element nahi hai to -1 dega nahi to index number dega)
+        console.log(arr.indexOf(2)); //-1
+        console.log(arr.indexOf(56)); // 2 (56 in second index)
+       
+        //  INCLUDE (element hai to true element  nahi to false)
+        console.log(arr.includes(2)) // false
+        console.log(arr.includes(56)) //true
+
+        // FINDINDEX 
+        const findIndex = arr.findIndex((ele) =>{
+          return ele == 5
+        })
+        console.log(findIndex);
+        
+        
+    </script>
+  </body>
+</html>

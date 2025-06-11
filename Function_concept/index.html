@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1) SIMPLE FUNCTION
+      // (we can call it from anywere)
+      show();
+      function show() {
+        console.log("simple function");
+      }
+
+      //   4) Immediate Invoke Function Expression(IIFE || efi)
+      (() => {
+        console.log("IIFE Function");
+      })();
+
+      // 2) Annonymous Function
+      var show2 = function () {
+        console.log("annonymous function");
+      };
+      show2();
+
+      // 3) ARROW Function
+      const show3 = () => {
+        console.log("arrow function");
+      };
+      show3();
+    </script>
+  </body>
+</html>
