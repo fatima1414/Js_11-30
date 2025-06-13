@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="" id="value1" />
+    <button id="save">Submit</button>
+    <label id="ack"></label>
+
+    <script>
+      document.querySelector("#save").addEventListener("click", () => {
+        const value1 = document.querySelector("#value1").value;
+
+        try {
+          if (isNaN(value1)) {
+            throw "Please enter only number";
+          } else if (!value1) {
+            throw "Please enter value";
+          } else {
+            throw "";
+          }
+        } catch (error) {
+          document.querySelector("#ack").innerHTML = error;
+        }
+      });
+    </script>
+  </body>
+</html>
