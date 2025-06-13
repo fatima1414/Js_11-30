@@ -34,6 +34,7 @@ signup.addEventListener('submit', (e) => {
     // const StringRegEx = /^[A-Za-z. ]{2,15}$/;
 
     // const MobileRegEx = /^[0-9]{10}$/
+    const EmailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const MobileRegEx = /^[6789][0-9]{9}$/
 
 
@@ -50,7 +51,10 @@ signup.addEventListener('submit', (e) => {
 
     if (!email.trim()) {
         email_error.innerHTML = "please enter your name"
-    } else {
+    }else if (!EmailRegEx.test(email)) {
+    email_error.innerHTML = "please enter a valid email";
+     }   
+     else {
         email_error.innerHTML = ""
     }
 
