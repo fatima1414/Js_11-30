@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(rgba(220, 69, 69, 0.7), rgba(96, 96, 232, 0.7)),
+            url('https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            height: 100dvh;
+            background-size: cover;
+            width: 100%;
+            opacity: 0;
+            transition: all 2s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>welcome to RNW</h1>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.querySelector('.container').style.opacity = 1
+        }, 2000)
+    </script>
+</body>
+
+</html>
