@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="save()">save</button>
+    <button onclick="show()">show</button>
+    <button onclick="remove()">remove</button>
+    <button onclick="clearAll()">clearAll</button>
+    <h1 id="showData"></h1>
+
+
+    <script>
+
+        function save(){
+           // localStorage.setItem(key,value) => Syntax
+            localStorage.setItem('username',"fatima")
+            localStorage.setItem('grid',9254)
+        }
+        function show(){
+            const username = localStorage.getItem('username')
+            document.querySelector('#showData').innerHTML = username
+        }
+        function remove(){
+            localStorage.removeItem('grid')
+        }
+        function clearAll(){
+            localStorage.clear()
+        }
+    </script>
+</body>
+</html>
