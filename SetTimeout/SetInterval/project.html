@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel Test</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: rgb(221, 206, 195);
+    }
+
+    .cur {
+      margin-top: 95px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" id="carouselInner"></div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <script>
+    const img = [
+      "https://cdn.pixabay.com/photo/2020/02/12/03/38/flowers-4841591_1280.jpg",
+      "https://pixabay.com/photos/blue-moon-rose-rose-flower-5513266/",
+      "https://pixabay.com/photos/rose-flower-red-plant-petals-6954137/",
+    ];
+
+    const carouselInner = document.getElementById("carouselInner");
+
+    img.forEach((imagesrc, index) => {
+      const div = document.createElement("div");
+      div.className = "carousel-item";
+
+      if (index === 0) {
+        div.classList.add("active");
+      }
+
+      div.innerHTML = `<img src="${imagesrc}" class="cur d-block mx-auto" style="width: 50%; height: 500px;" alt="Slide ${index + 1}">`;
+      carouselInner.appendChild(div);
+    });
+
+  
+    setInterval(() => {
+      const carousel = bootstrap.Carousel.getInstance(document.getElementById('myCarousel')) || new bootstrap.Carousel(document.getElementById('myCarousel'));
+      carousel.next();
+    }, 3000); 
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

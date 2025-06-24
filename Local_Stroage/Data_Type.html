@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>data type</title>
+  </head>
+  <body>
+    <button onclick="save()">save</button>
+    <button onclick="show()">show</button>
+
+    <script>
+      function save() {
+        localStorage.setItem("name", "test");
+        localStorage.setItem("grid", 9254);
+        localStorage.setItem("boolean", true);
+        localStorage.setItem("array", [34, 36, 35, 42, 55]);
+        // localStorage.setItem("object", { id: 233, name: "final" });
+        const obj = { id: 2365, name: "fatima" };
+
+        // Object  to JSON
+        localStorage.setItem("object", JSON.stringify(obj));
+      }
+      function show() {
+        const std2 = localStorage.getItem("object");
+        console.log(std2);
+
+        // JSON  to object
+        const std = JSON.parse(localStorage.getItem("object"));
+        console.log(std);
+        document.write(std.name);
+      }
+    </script>
+  </body>
+</html>
