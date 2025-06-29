@@ -10,7 +10,7 @@ const mobile = document.querySelector('#mobile').value
 const city = document.querySelector('#city').value
 const address = document.querySelector('#address').value
 const gender = document.querySelector('input[name="gender"]:checked')
-const hobby = document.querySelectorAll('#hobby:checked')
+const hobbies = document.querySelectorAll('#hobbies:checked')
 
 //all error tages
 const username_error = document.querySelector('#username_error')
@@ -19,17 +19,16 @@ const email_error = document.querySelector('#email_error')
 const mobile_error = document.querySelector('#mobile_error')
 const city_error = document.querySelector('#city_error')
 const gender_error = document.querySelector('#gender_error')
-const hobby_error = document.querySelector('#hobby_error')
+const hobbies_error = document.querySelector('#hobbies_error')
 const address_error = document.querySelector('#address_error')
 
 const StringRegEx = /^[A-Za-z. ]*$/
 const MobileRegEx = /^[6789][0-9]{9}$/
 const EmailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-// const PasswordRegEx = /^(?=.[A-Z])(?=.\d).{6,}$/
-const PasswordRegEx = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,16}$/;
+const PasswordRegEx = /^(?=.[A-Z])(?=.\d).{6,}$/
 
 let arr = []
-hobby.forEach((hobby)=>{
+hobbies.forEach((hobby)=>{
     arr.push(hobby.value)
 });
 
@@ -79,10 +78,10 @@ if(!gender){
     gender_error.innerHTML = ""
 }
 
-if(hobby.length>0){
-    hobby_error.innerHTML = ""
+if(hobbies.length>0){
+    hobbies_error.innerHTML = ""
 }else{
-    hobby_error.innerHTML = "please enter Your hobbies!"
+     hobbies_error.innerHTML = "please enter Your hobbies!"
 }
 
 if(!address.trim()){
@@ -98,7 +97,7 @@ if(StringRegEx.test(username) &&
     password && 
     city && 
     gender && 
-    hobby.length > 0 && 
+    hobbies.length > 0 && 
     address)
      {
     let userList = JSON.parse(localStorage?.getItem('userList')) 
@@ -109,11 +108,11 @@ if(StringRegEx.test(username) &&
     
     const user = {
         id,
-        username:username,email,mobile,city,gender:gender.value,hobby:arr,address
+        username:username,email,mobile,city,gender:gender.value,hobbies:arr,address
     }
 
     userList.push(user)
-    localStorage.setItem('userList',JSON.stringify(userList))
+    localStorage.setItem('userList',JSON.stringify(userList)) || []
 
 
     alert("user added")
@@ -134,7 +133,7 @@ function show(){
             <td>${user.mobile}</td>
             <td>${user.city}</td>
             <td>${user.gender}</td>
-            <td>${user.hobby}</td>
+            <td>${user.hobbies}</td>
             <td>${user.address}</td>
 
         </tr>
@@ -143,6 +142,4 @@ function show(){
 
     document.querySelector("#showUser").innerHTML = output
 }
-
-
-//Hello2024$
+show()

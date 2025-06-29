@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <form method="post"  action="" class="col-lg-6 mx-auto my-5 p-5 shadow" id="signup">
+    <div class="mt-4">
+        <input type="text" placeholder="enter name" id="username" class="form-control"/>
+        <p id="username_error"></p>
+    </div>
+    <!-- <div class="mt-4">
+        <input type="password" placeholder="enter password" id="password" class="form-control"/>
+        <p id="password_error"></p>
+    </div> -->
+     <div class="mt-4">
+        <input type="text" placeholder="enter email" id="email" class="form-control"/>
+        <p id="email_error"></p>
+    </div>
+     <div class="mt-4">
+        <input type="number" placeholder="enter mobile" id="mobile" class="form-control"/>
+        <p id="mobile_error"></p>
+    </div>
+    <div class="mt-4">
+        <select id="city" class="form-select">
+            <option value="" disabled selected>--select city--</option>
+            <option value="ahm">Ahm</option>
+            <option value="surat">Surat</option>
+        </select>
+        <p id="city_error"></p>
+    </div>
+    <div class="mt-4">
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="male">female</label>
+        <input type="radio" name="gender" id="other" value="other">
+        <label for="male">other</label>
+        <p id="gender_error"></p>
+    </div>
+   <div class="mt-4">
+        <input type="checkbox" name="hobbies" id="hobbies" value="play">
+        <label for="play">play</label>
+        <input type="checkbox" name="hobbies" id="hobbies" value="dance">
+        <label for="dance">dance</label>
+        <input type="checkbox" name="hobbies" id="hobbies" value="other">
+        <label for="other">other</label>
+        <p id="hobbies_error"></p>
+   </div>
+   <div class="mt-4">
+      <textarea  id="address" class="form-control" placeholder="enter address"></textarea>
+    <p id="address_error"></p>
+   </div>
+   
+   <div class="mt-4">
+    <button class="btn btn-outline-primary">Submit</button>
+   </div>
+   </form>
+
+    <div class="table-responsive">
+        <table class="table table-success table-hover table-striped container">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>mobile</th>
+                    <th>city</th>
+                    <th>gender</th>
+                    <th>hobbies</th>
+                    <th>address</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody id="showUser"></tbody>
+        </table>
+    </div>
+        
+   <script src="./script.js"></script>
+</body>
+</html>
