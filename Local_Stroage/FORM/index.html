@@ -20,8 +20,8 @@
   <body>
     <form method="post" action="" class="col-lg-6 mx-auto my-5 p-5 shadow" id="signup">
       <div class="mt-4">
-        <input type="text" placeholder="enter name" id="name" class="form-control"  />
-        <p id="name_error"></p>
+        <input type="text" placeholder="enter name" id="username" class="form-control"  />
+        <p id="username_error"></p>
       </div>
       <div class="mt-4">
         <input type="text" placeholder="enter email" id="email" class="form-control" />
@@ -54,13 +54,13 @@
         <p id="gender_error"></p>
       </div>
       <div class="mt-4">
-      <input type="checkbox" name="hobbies" id="hobby-play" value="play">
+      <input type="checkbox" name="hobbies" id="hobby" value="play">
        <label for="hobby-play">Play</label>
-       <input type="checkbox" name="hobbies" id="hobby-dance" value="dance">
+       <input type="checkbox" name="hobbies" id="hobby" value="dance">
        <label for="hobby-dance">Dance</label>
-       <input type="checkbox" name="hobbies" id="hobby-other" value="other">
+       <input type="checkbox" name="hobbies" id="hobby" value="other">
        <label for="hobby-other">Other</label>
-       <p id="hobbies_error"></p>
+       <p id="hobby_error"></p>
       </div>
       <div class="mt-4">
         <textarea id="address" class="form-control" placeholder="enter address" ></textarea>
@@ -83,10 +83,9 @@
             <th>gender</th>
             <th>hobby</th>
             <th>address</th>
-            <th>action</th>
           </tr>
         </thead>
-        <tbody id="showuser"></tbody>
+        <tbody id="showUser"></tbody>
       </table>
     </div>
 
