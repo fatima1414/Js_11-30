@@ -1,4 +1,5 @@
-const signup = document.querySelector('#signup')
+ let signup = document.querySelector('#signup')
+  let userData = JSON.parse(localStorage.getItem('userList')) 
 signup.addEventListener('submit',(e)=>{
     e.preventDefault()
   

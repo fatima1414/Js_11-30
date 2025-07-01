@@ -10,6 +10,9 @@
         p{
             color: red;
         }
+        #update{
+            display: none;
+        }
     </style>
 
 </head>
@@ -63,7 +66,8 @@
    </div>
    
    <div class="mt-4">
-    <button class="btn btn-outline-primary">Submit</button>
+    <button class="btn btn-outline-primary" id="Submit">Submit</button>
+    <button type="button" class="btn btn-outline-warning" id="update">update</button>
    </div>
    </form>
 
@@ -85,7 +89,6 @@
             <tbody id="showUser"></tbody>
         </table>
     </div>
-        
-   <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
