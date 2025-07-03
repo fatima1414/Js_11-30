@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>show cart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="cartDetails"></div>
+
+    <script>
+      let cartList = JSON.parse(localStorage.getItem("cartList"));
+
+      function showCart() {
+        var output = "";
+
+        if (cartList.length > 0) {
+          cartList?.forEach((cart) => {
+            output += `
+                <div class =" col-lg-8 mx-auto shadow p-5 my-5">
+                    <div class = "row">
+                            <div class ="col-lg-4">
+                                <img src ="${
+                                  cart.p_url
+                                }" alt=""class="w-100 h-100">
+                             </div>
+                              <div class="col-lg-8">
+                                       <h2>${cart.p_name}</h2>
+                                           <ul>
+                                            <li>category:-${cart.category}</li>
+                                            <li>Price:-${cart.p_price}</li>
+                                            <li>category:-${cart.count}</li>
+                                            <li>Total amount -${
+                                              cart.p_price * cart.count
+                                            }</li>
+                                            </ul>
+                          <button class ="btn btn-danger" onclick ="removeCart(${
+                            cart.id
+                          })">delete</button>
+                            </div>
+                     </div>
+                </div>  `;
+          });
+
+          document.querySelector("#cartDetails").innerHTML = output;
+        } else {
+          document.querySelector("#cartDetails").innerHTML = `
+           <div style="
+           background: linear-gradient(135deg, #f8cdda, #1d2b64);
+             color: white;
+           padding: 15px 20px;
+            border-radius: 15px;
+            font-size: 18px;
+                    font-weight: bold;
+           box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+           text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         ">
+       <i class="fa-solid fa-cart-shopping" style="margin-right: 8px;"></i>
+       No item is selected
+     </div>
+`;
+        }
+      }
+
+      showCart();
+
+      function removeCart(id) {
+        alert(id);
+
+        const filterData = cartList.filter((cart) => {
+          return cart.id !== id;
+        });
+
+        localStorage.setItem("cartList", JSON.stringify(filterData));
+        location.reload();
+        showCart();
+      }
+    </script>
+  </body>
+</html>
