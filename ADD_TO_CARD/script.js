@@ -154,7 +154,7 @@ function update(id) {
 
 function countCart() {
   const cartList = JSON.parse(localStorage.getItem('cartList'));
-
+  
   let totalQty = 0;
   cartList.forEach((item) => {
     totalQty += item.count;
