@@ -146,8 +146,20 @@ function update(id) {
   });
 }
 
-function countCart(){
-  const cartList = JSON.parse(localStorage.getItem('cartList'))
-  document.querySelector('#cartCount').innerHTML = cartList.length
+// function countCart(){
+//   const cartList = JSON.parse(localStorage.getItem('cartList'))
+//   document.querySelector('#cartCount').innerHTML = cartList.length
+// }
+// countCart()
+
+function countCart() {
+  const cartList = JSON.parse(localStorage.getItem('cartList'));
+
+  let totalQty = 0;
+  cartList.forEach((item) => {
+    totalQty += item.count;
+  });
+
+  document.querySelector('#cartCount').innerHTML = totalQty;
 }
-countCart()
+countCart();
