@@ -24,53 +24,45 @@
         if (cartList.length > 0) {
           cartList?.forEach((cart) => {
             output += `
-                <div class =" col-lg-8 mx-auto shadow p-5 my-5">
-                    <div class = "row">
-                            <div class ="col-lg-4">
-                                <img src ="${
-                                  cart.p_url
-                                }" alt=""class="w-100 h-100">
+            <div class =" col-lg-8 mx-auto shadow p-5 my-5">
+                <div class = "row">
+                             <div class ="col-lg-4">
+                                <img src ="${cart.p_url}" alt=""class="w-100 h-100">
                              </div>
-                              <div class="col-lg-8">
-                                       <h2>${cart.p_name}</h2>
-                                           <ul>
-                                            <li>category:-${cart.category}</li>
-                                            <li>Price:-${cart.p_price}</li>
-                                            <li>Qty:-${cart.count}</li>
-                                            <li>Total amount -${cart.p_price * cart.count}</li>
-                                            </ul>
-                          <button class ="btn btn-danger" onclick ="removeCart(${
-                            cart.id
-                          })">delete</button>
-                            </div>
+                     <div class="col-lg-8">
+                                 <h2>${cart.p_name}</h2>
+                             <ul>
+                                 <li>category:-${cart.category}</li>
+                                 <li>Price:-${cart.p_price}</li>
+                                 <li>Qty:-${cart.count}</li>
+                                 <li>Total amount -${cart.p_price * cart.count}</li>
+                             </ul>
+                                 <button class ="btn btn-danger" onclick ="removeCart(${ cart.id })">delete</button>
                      </div>
-                </div>  `;
+                 </div>
+             </div>  `;
           });
 
           document.querySelector("#cartDetails").innerHTML = output;
         } else {
           document.querySelector("#cartDetails").innerHTML = `
-           <div style="
-           background: linear-gradient(135deg, #f8cdda, #1d2b64);
-             color: white;
+           <div style=" background: linear-gradient(135deg, #f8cdda, #1d2b64); color: white;
            padding: 15px 20px;
             border-radius: 15px;
             font-size: 18px;
-                    font-weight: bold;
+            font-weight: bold;
            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
            text-align: center;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-         ">
-       <i class="fa-solid fa-cart-shopping" style="margin-right: 8px;"></i>
-       No item is selected
-     </div>
-`;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+           <i class="fa-solid fa-cart-shopping" style="margin-right: 8px;"></i>
+            No item is selected
+           </div>`;
+           }
         }
-      }
 
-      showCart();
+       showCart();
 
-      function removeCart(id) {
+       function removeCart(id) {
         alert(id);
 
         const filterData = cartList.filter((cart) => {
@@ -80,7 +72,7 @@
         localStorage.setItem("cartList", JSON.stringify(filterData));
         location.reload();
         showCart();
-      }
+       }
     </script>
   </body>
 </html>
