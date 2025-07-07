@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOG API</title>
+</head>
+<body>
+    <button onclick="showapi()">showapi</button>
+    <div id="showdata"></div>
+
+
+    <script>
+        async function showapi(){
+             const res = await fetch('https://dog.ceo/api/breeds/image/random')
+             const data = await res.json()
+             const image = data.message
+             const output = `<img src ="${image}" width="200" height="200"/>`
+             document.querySelector('#showdata').innerHTML= output
+        }
+    </script>
+</body>
+</html>
