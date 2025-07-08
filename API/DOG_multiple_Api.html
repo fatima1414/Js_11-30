@@ -1,0 +1,27 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>multiple api</title>
+    </head>
+    <body>
+    
+        <div id="showapi"></div>
+
+        <script>
+            fetch('https://dog.ceo/api/breeds/image/random/7')
+            .then(res => res.json())
+            .then(data =>{
+
+                const image = data.message
+                let output =""
+                image.forEach((image) => {
+
+                    output += `<img src="${image}" width="200" height="200"/> ` 
+                })
+                document.querySelector('#showapi').innerHTML = output
+            })
+        </script>
+    </body>
+    </html>

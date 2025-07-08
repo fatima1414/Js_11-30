@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <script>
-
-        /////// 1 way to call api
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then((res)=>{
-            return res.json()
+      /////// 1 way to call api
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => {
+          return res.json();
         })
-        .then((data)=>{
-            console.log(data);
-        })
+        .then((data) => {
+          console.log(data);
+        });
 
-
-        ///////// 2 way to call api
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then((res)=> res.json())
-        .then(data => console.log(data))
+      ///////// 2 way to call api
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => res.json())
+        .then((data) => console.log(data));
     </script>
-</body>
+  </body>
 </html>
