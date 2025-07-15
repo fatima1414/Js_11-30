@@ -136,7 +136,8 @@ function show() {
   let output = "";
 
   ///////////////search filter 
-  const filterData = userData.filter((user)=>{
+  const filterData = userData
+  .filter((user)=>{
     return user.username.toLowerCase().includes(searchItem.toLowerCase())
   })
   .sort((a,b)=>{
@@ -149,7 +150,7 @@ function show() {
   }else if(sortItem == 'userAsc'){
     return a.username.localeCompare(b.username)
   }else if(sortItem == 'userDesc'){
-    return a.username.localeCompare(a.username)
+    return b.username.localeCompare(a.username)
   }
    })
   filterData?.forEach((user, index) => {
