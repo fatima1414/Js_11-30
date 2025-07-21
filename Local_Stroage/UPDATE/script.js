@@ -4,7 +4,7 @@ signup.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const username = document.querySelector("#username").value;
-  // const password = document.querySelector("#password").value;
+  const password = document.querySelector("#password").value;
   const email = document.querySelector("#email").value;
   const mobile = document.querySelector("#mobile").value;
   const city = document.querySelector("#city").value;
@@ -14,7 +14,7 @@ signup.addEventListener("submit", (e) => {
 
   //all error tages
   const username_error = document.querySelector("#username_error");
-  // const password_error = document.querySelector("#password_error");
+  const password_error = document.querySelector("#password_error");
   const email_error = document.querySelector("#email_error");
   const mobile_error = document.querySelector("#mobile_error");
   const city_error = document.querySelector("#city_error");
@@ -27,7 +27,7 @@ signup.addEventListener("submit", (e) => {
   const StringRegEx = /^[A-Za-z. ]*$/;
   const MobileRegEx = /^[6789][0-9]{9}$/;
   const EmailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  // const PasswordRegEx = /^(?=.[A-Z])(?=.\d).{6,}$/;
+  const PasswordRegEx = /^(?=.[A-Z])(?=.\d).{6,}$/;
 
   let arr = [];
   hobbies.forEach((hobby) => {
@@ -43,14 +43,14 @@ signup.addEventListener("submit", (e) => {
     username_error.innerHTML = "";
   }
 
-  // if (!password.trim()) {
-  //     password_error.innerHTML = "Please enter your password";
-  // } else if (!PasswordRegEx.test(password)) {
-  //     password_error.innerHTML =
-  //         "Password must be 6-16 characters, include at least 1 letter, 1 number & 1 special character";
-  // } else {
-  //     password_error.innerHTML = "";
-  // }
+  if (!password.trim()) {
+      password_error.innerHTML = "Please enter your password";
+  } else if (!PasswordRegEx.test(password)) {
+      password_error.innerHTML =
+          "Password must be 6-16 characters, include at least 1 letter, 1 number & 1 special character";
+  } else {
+      password_error.innerHTML = "";
+  }
 
   if (!email.trim()) {
     email_error.innerHTML = "Please enter your email";
@@ -95,7 +95,7 @@ signup.addEventListener("submit", (e) => {
 
   //  Save Valid User
    if (
-    StringRegEx.test(username) && email && MobileRegEx.test(mobile) && city && gender && 
+    StringRegEx.test(username) && password && email && MobileRegEx.test(mobile) && city && gender && 
     hobbies.length > 0 && address ) {
     let userList = userData || [];
     // console.log("userList....");
@@ -106,6 +106,7 @@ signup.addEventListener("submit", (e) => {
     const user = {
       id,
       username: username,
+      password,
       email,
       mobile,
       city,
@@ -133,6 +134,7 @@ function show() {
         <tr>
             <td>${index + 1}</td>
             <td>${user.username}</td>
+            <td>${user.password}</td>
             <td>${user.email}</td>
             <td>${user.mobile}</td>
             <td>${user.city}</td>
@@ -187,6 +189,7 @@ function update(id) {
   console.log(singleUser);
 
   let username = document.querySelector("#username");
+  let password = document.querySelector("#password");
   let email = document.querySelector("#email");
   let mobile = document.querySelector("#mobile");
   let city = document.querySelector("#city");
@@ -199,6 +202,7 @@ function update(id) {
 
   //  alert(id)
   username.value = singleUser.username;
+  password.value = singleUser.password;
   email.value = singleUser.email;
   mobile.value =singleUser.mobile;
   city.value =singleUser.city;
@@ -213,6 +217,7 @@ function update(id) {
     const newUser = {
       id,
       username: username.value,
+      password: password.value,
       email: email.value,
       mobile: mobile.value,
       city: city.value,

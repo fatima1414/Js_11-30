@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Update</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       p{
+            color: red;
+        }
+
+        .btn{
+            color: black;
+        }
+
+        #update{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <form method="post"  action="" class="col-lg-6 mx-auto my-5 p-5 shadow" id="signup">
+    <div class="mt-4">
+        <input type="text" placeholder="enter recipename" id="recipename" class="form-control"/>
+        <p id="recipename_error"></p>
+    </div>
+     <div class="mt-4">
+        <input type="text" placeholder="enter title" id="title" class="form-control"/>
+          <p id="title_error"></p>
+    </div>
+    <div class="mt-4">
+        <input type="text" placeholder="enter  ingredients" id="ingredients" class="form-control"/>
+          <p id="ingredients_error"></p>
+    </div>
+    <div class="mt-4">
+        <input type="text" placeholder="enter  instructions" id="instructions" class="form-control"/>
+          <p id="instructions_error"></p>
+    </div>
+    <div class="mt-4">
+        <select id="cuisine" class="form-select">
+            <option value="" disabled selected>-- cuisine type.--</option>
+            <option value="indian">indian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Italian">Italian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Mexican">Mexican</option>
+        </select>
+    </div>
+   
+
+   
+   <div class="mt-4">
+    <button class="btn btn-outline-primary" id="Submit">Submit</button>
+    <button type="button" class="btn btn-outline-warning" id="update">update</button>
+   </div>
+   </form>
+<!-- 
+    <div class="container my-5">
+    <div class="row">
+     
+        <div class="col-lg-6">
+            <input type="text" class="form-control" id="searchInput" placeholder="enter user name"/>
+        </div>
+      
+         <div class="col-lg-6">
+            <select class="form-select" id="sorting">
+                <option value="" disabled selected >--chose your range---</option>
+                <option value="userAsc">A-Z</option>
+                <option value="userDesc">Z-A</option>
+            </select>
+         </div>
+    </div>
+   </div> -->
+
+    <div class="table-responsive">
+        <table class="table table-success table-hover table-striped container">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>recipe name</th>
+                    <th>title</th>
+                    <th>ingredients</th>
+                    <th>instructions</th>
+                    <th>cuisine</th>
+                     <th>update/delete</th>
+                   
+                </tr>
+            </thead>
+            <tbody id="showUser"></tbody>
+        </table>
+    </div>
+    
+<script src="./script.js"></script>
+</body>
+</html>
