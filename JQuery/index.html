@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="hideShow">Hide/Show</button>
+
+    <hr />
+
+    <button id="slideUp">slideDown</button>
+    <button id="slideDown">slideup</button>
+    <button id="slideUpDown">Up/Down</button>
+
+    <hr />
+
+    <button id="fadeUp">fade show</button>
+    <button id="fadeDown">fade Down</button>
+    <button id="fadeUpDown">fade Up/Down</button>
+
+    <p id="para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, optio
+      cupiditate? Aspernatur cupiditate repudiandae aliquam modi earum
+      voluptatum, at atque ducimus saepe id vel deleniti, tempore eligendi enim,
+      fugiat corrupti. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Ullam, optio. Aliquid soluta sapiente ex reprehenderit libero repellendus,
+      ut ullam debitis maiores porro blanditiis officiis saepe laborum expedita,
+      dolores illum incidunt!
+    </p>
+
+    <script>
+      // $(document).ready(()=>{
+      //     alert("hello")
+      // })
+      $(document).ready(function () {
+        $("#hide").click(() => {
+          $("#para").hide(2000);
+        })
+        $("#show").click(() => {
+          $("#para").show();
+        })
+        $("#hideShow").click(() => {
+          $("#para").toggle();
+        })
+
+        $("#slideUp").click(() => {
+          $("#para").slideDown();
+        })
+        $("#slideDown").click(() => {
+          $("#para").slideUp();
+        })
+        $("#slideUpDown").click(() => {
+          $("#para").slideToggle();
+        })
+
+         $("#fadeUp").click(() => {
+          $("#para").fadeIn();
+        })
+         $("#fadeDown").click(() => {
+          $("#para").fadeOut();
+        })
+         $("#fadeUpDown").click(() => {
+          $("#para").fadeToggle();
+        })
+      });
+    </script>
+  </body>
+</html>

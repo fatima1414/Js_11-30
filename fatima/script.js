@@ -15,7 +15,6 @@ signup.addEventListener("submit", (e) => {
     const title_error = document.querySelector("#title_error");
     const ingredients_error = document.querySelector("#ingredients_error");
     const instructions_error = document.querySelector("#instructions_error");
-    // const cuisine_error = document.querySelector("cuisine_error");
 
     const StringRegEx = /^[A-Za-z. ]*$/;
 
@@ -52,17 +51,13 @@ signup.addEventListener("submit", (e) => {
         instructions_error.innerHTML = "";
     }
 
-    // if (!cuisine.trim()) {
-    //     cuisine_error.innerHTML = "please choose Your cuisine!";
-    // } else {
-    //     cuisine_error.innerHTML = "";
-    // }
+
 
     if (
         StringRegEx.test(recipename) &&
         title &&
         ingredients &&
-         instructions
+        instructions
 
     ) {
         let userList = userData || [];
@@ -86,38 +81,39 @@ signup.addEventListener("submit", (e) => {
     }
 });
 
-// let searchItem = "";
-// let sortItem = "";
+let searchItem = "";
+let sortItem = "";
 
-// document.querySelector('#searchInput').addEventListener('input', (e) => {
-//     searchItem = e.target.value;
-//     show()
-// })
+document.querySelector('#searchInput').addEventListener('input', (e) => {
+    searchItem = e.target.value;
+    show()
+})
 
-// document.querySelector('#sorting').addEventListener('change', (e) => {
-//     sortItem = e.target.value;
-//     show()
-// })
+document.querySelector('#sorting').addEventListener('change', (e) => {
+    sortItem = e.target.value;
+    show()
+})
 
 
 function show() {
-    console.table(userData);
+       let userList = JSON.parse(localStorage.getItem("userList")) || [];
+    console.table(userList);
     let output = "";
 
-    const filterData = userData
-    //     .filter((usersearch) => {
-    //         return usersearch.recipename.toLowerCase()
-    //         // .includes(searchItem.toLowerCase())
-    //     })
-    //     .sort((a, b) => {
-
-
-    //         if (sortItem == 'userAsc') {
-    //             return a.recipename.localeCompare(b.recipename)
-    //         } else if (sortItem == 'userDesc') {
-    //             return b.recipename.localeCompare(a.recipename)
-    //         }
-    //     })
+    const filterData = userList
+        .filter((usersearch) => {
+            return usersearch.recipename.toLowerCase()
+                .includes(searchItem.toLowerCase());
+        })
+        .sort((a, b) => {
+            if (sortItem == 'userAsc') {
+                return a.recipename.localeCompare(b.recipename);
+            } else if (sortItem == 'userDesc') {
+                return b.recipename.localeCompare(a.recipename);
+            } else {
+                return 0; // no sorting
+            }
+        })
     filterData?.forEach((user, index) => {
         output += `
         <tr>
@@ -157,7 +153,7 @@ function trash(id) {
 }
 
 function update(id) {
-    document.querySelector("#submit").style.display = "none";
+    document.querySelector("#submit");
     document.querySelector("#update").style.display = "block";
 
     const singleUser = userData.find((user) => {

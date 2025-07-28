@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add to class</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #para{
+          
+            color: rgb(54, 2, 101);
+            background-color: #b68d8d;
+            padding: 10px;
+            margin-top: 8px;
+        }
+        .show{
+            background-color: #9e1616 !important;
+            color: #fff !important;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .menu{
+            border-radius: 10px;
+            padding: 10px;
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+    <button id="Add">add</button>
+    <button id="Remove">Remove</button>
+    <button id="AddRemove">AddRemove</button>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur. Perferendis iste voluptatibus laudantium autem iusto consequuntur repudiandae placeat numquam molestias, dolore quis ex. Eveniet nostrum iure commodi necessitatibus qui rem autem perspiciatis minus? Illum omnis modi eum laboriosam veniam. Eius dolores mollitia necessitatibus, aspernatur veniam itaque sint soluta est ipsam beatae, facilis velit praesentium.</p>
+
+    <script>
+
+        $(document).ready(()=>{
+            $("#Add").click(()=>{
+                $("#para").addClass("show")
+            })
+
+              $("#Remove").click(()=>{
+                $("#para").removeClass("show")
+            })
+
+              $("#AddRemove").click(()=>{
+                $("#para").toggleClass("menu")
+            })
+        })
+    </script>
+</body>
+</html>
