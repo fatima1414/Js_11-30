@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .owl-carousel img {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Owl Carousel JS (This was missing) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+
+<body>
+  <div class="owl-carousel owl-theme">
+
+    <div class="item">
+      <img
+        src="https://static.vecteezy.com/system/resources/thumbnails/040/890/255/small_2x/ai-generated-empty-wooden-table-on-the-natural-background-for-product-display-free-photo.jpg"
+        alt="">
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7VHauXCtn8NKM5j8-cQIJrLXzsslaOXlfkQ&s" alt="">
+    </div>
+    <div class="item">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-fh346sgWwvMPqBGhkA--ZCu2PBIxILoJvoGOHjtvW5hP2JqAkiu9kjZhJ6ikOC6lJMA&usqp=CAU"
+        alt="">
+    </div>
+    <div class="item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxaJr7j4qEWFvOlaMMFPvqbrbiT__-uomYAQ&s" alt="">
+    </div>
+    <div class="item">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-7MUrKQTryXzUZnWXhKL-7zTZaLYizVjutVM6z5-9akBCRtFIkqIovkUEnf6WvjbmkM4&usqp=CAU"
+        alt="">
+    </div>
+    <div class="item">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROU-QF8Hnpa0LHNZzc8RpEYoB7_FDL7m9ABZhc6p_zGcB80Be4tORzVOsNyENZfMvag5s&usqp=CAU"
+        alt="">
+    </div>
+    <div class="item">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRreAGyYZmaC9KiwQ9Z3u42pLc2tLepHEOiLCTyvMSCh97DRrFcTkXiZnYBNmx6iI1bhCI&usqp=CAU"
+        alt="">
+    </div>
+  </div>
+
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        576: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
+        1200: {
+          items: 4,
+        },
+        1400: {
+          items: 5,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple FAQ with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .faq {
+        width: 60%;
+        background-color: beige;
+        padding: 20px;
+        border: 2px solid black;
+        box-shadow: 4px 4px 4px rgba(114, 105, 105, 0.3);
+        text-align: left;
+      }
+
+      .faq-question {
+        font-weight: bold;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+
+      .faq-answer {
+        display: none;
+        margin: 5px 0 15px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="faq">
+      <h2>FAQ</h2>
+
+      <div class="faq-question">Q1: What is this?</div>
+      <div class="faq-answer">
+        A: A simple FAQ using jQuery to toggle answers.
+      </div>
+
+      <div class="faq-question">Q2: How does it work?</div>
+      <div class="faq-answer">
+        A: Click on a question to show or hide the answer.
+      </div>
+
+      <div class="faq-question">Q3: Can I add more questions?</div>
+      <div class="faq-answer">
+        A: Yes, just copy and paste another question-answer pair.
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".faq-question").click(function () {
+          $(this).next(".faq-answer").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
